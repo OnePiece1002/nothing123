@@ -1,0 +1,22 @@
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class WriteToFile {
+
+	public static void main(String[] args) {
+		try {
+			FileWriter myWriter = new FileWriter("C:\\Users\\Admin\\Desktop\\java\\filehandling.txt");
+			myWriter.write("Files in java might be tricky, but it is fun enough!");
+			myWriter.write("\nWe are enjoying File handling in JAVA!");
+			myWriter.write("\nThis is my first File Handling program in JAVA!");
+			myWriter.close();
+			System.out.println("Successfully wrote to the file");
+		}
+		catch(IOException e){
+			System.out.println("An error occurred");
+			e.printStackTrace();
+		}
+
+	}
+
+}
